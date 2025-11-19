@@ -48,8 +48,8 @@ def etl_data(df):
 
 def insert_db(df):
     cnxn = pyodbc.connect('DRIVER={SQL Server Native Client 10.0};'
-                          'SERVER=s-fin.dc.centrzaimov.ru,4644;'
-                          'DATABASE=Pesochnica;'
+                          'SERVER=имя сервера'
+                          'DATABASE=имя таблицы;'
                           'Trusted_connection=yes;')
     cursor = cnxn.cursor()
     for index, row in df.iterrows():
